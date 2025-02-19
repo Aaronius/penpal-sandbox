@@ -1,13 +1,19 @@
 {
+  "name": "rsbuild-vanilla-ts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "concurrently --kill-others \"esbuild parent.js child.js --bundle --watch --outdir=dist\" \"http-server\""
-  },
-  "dependencies": {
-    "penpal": "^5.3.0"
+    "build": "rsbuild build",
+    "dev": "rsbuild dev --open",
+    "preview": "rsbuild preview"
   },
   "devDependencies": {
-    "concurrently": "^6.2.0",
-    "esbuild": "^0.12.15",
-    "http-server": "^0.12.3"
+    "@rsbuild/core": "^1.2.4",
+    "prettier": "^3.5.1",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "penpal": "^7.0.1"
   }
 }
